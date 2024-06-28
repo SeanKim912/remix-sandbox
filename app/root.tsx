@@ -1,4 +1,4 @@
-import { LiveReload, Outlet } from "@remix-run/react";
+import { LiveReload, Outlet, Links } from "@remix-run/react";
 
 export default function App() {
   return (
@@ -10,6 +10,12 @@ export default function App() {
           content="width=device-width, initial-scale=1"
         />
         <title>Remix Sandbox</title>
+        <Links />
+        {/*
+          Linking the css file in styles from the _index.tsx file. Note that the styling will NOT
+          appear in the other routes unless linked similarly, allowing CSS files to be cached long-term
+          and be naturally code-split. Prevents unexpected CSS clashes!
+        */}
       </head>
       <body>
         Whaazzzuuuppppp
